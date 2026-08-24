@@ -8,6 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
+    "server": "node server/index.js"
   },
   "dependencies": {
     "cors": "^2.8.6",
