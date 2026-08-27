@@ -1,12 +1,10 @@
-// server/index.js
-const express = require('express');
-const cors = require('cors');
-require('dotenv').config();
-
-const { OpenAI } = require('openai');
-const { ChatOpenAI } = require('langchain/chat_models/openai');
-const { LLMChain } = require('langchain/chains');
-const { PromptTemplate } = require('langchain/prompts');
+import express from 'express';
+import cors from 'cors';
+import dotenv from 'dotenv';
+dotenv.config();
+import { ChatOpenAI } from 'langchain/chat_models/openai';
+import { LLMChain } from 'langchain/chains';
+import { PromptTemplate } from 'langchain/prompts';
 
 const app = express();
 app.use(cors());
