@@ -1,0 +1,322 @@
+/* UserProfile.css */
+.user-profile-container {
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  width: 100%;
+}
+
+.profile-error {
+  color: #ff5c5c;
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-header-banner {
+  height: 100px;
+  background: linear-gradient(135deg, rgba(100, 108, 255, 0.2), rgba(139, 92, 246, 0.2));
+  border-radius: 12px;
+  margin-bottom: -50px;
+  position: relative;
+}
+
+.profile-edit-trigger {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profile-edit-trigger:hover {
+  background: rgba(0, 0, 0, 0.6);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.profile-details {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  padding: 0 24px;
+  margin-bottom: 32px;
+}
+
+.profile-avatar-large {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a4b4c4, #8494a4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 2.5rem;
+  border: 6px solid #151515; /* Matches modal background */
+  flex-shrink: 0;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
+}
+
+.profile-username {
+  margin: 0 0 4px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.profile-badge {
+  background: linear-gradient(135deg, #646cff, #8b5cf6);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  align-self: flex-start;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.profile-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+}
+
+.profile-section h4 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #eee;
+}
+
+.profile-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-field:last-child {
+  border-bottom: none;
+}
+
+.field-label {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.field-value {
+  color: #fff;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.profile-input {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(100, 108, 255, 0.5);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  width: 200px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.profile-input:focus {
+  border-color: #8b5cf6;
+}
+
+.profile-edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-save-btn {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.profile-save-btn:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.profile-save-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.profile-cancel-btn {
+  background: transparent;
+  color: #888;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.profile-cancel-btn:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+
+.profile-action-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: left;
+}
+
+.profile-action-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.danger-zone {
+  border-color: rgba(255, 92, 92, 0.2);
+  background: rgba(255, 92, 92, 0.05);
+}
+
+.danger-zone h4 {
+  color: #ff5c5c;
+}
+
+.danger-desc {
+  font-size: 0.85rem;
+  color: #aaa;
+  margin: 0 0 8px;
+}
+
+.danger-btn {
+  background: rgba(255, 92, 92, 0.1);
+  border-color: rgba(255, 92, 92, 0.2);
+  color: #ff5c5c;
+  text-align: center;
+  font-weight: 600;
+}
+
+.danger-btn:hover {
+  background: rgba(255, 92, 92, 0.2);
+  color: #ff5c5c;
+}
+
+/* Light Theme Overrides */
+body.light-theme .profile-avatar-large {
+  border-color: #ffffff; /* Matches light modal background */
+}
+
+body.light-theme .profile-username,
+body.light-theme .field-value,
+body.light-theme .profile-section h4 {
+  color: #111;
+}
+
+body.light-theme .profile-section {
+  background: #fcfcfc;
+  border-color: #ddd;
+}
+
+body.light-theme .profile-field {
+  border-bottom-color: #eee;
+}
+
+body.light-theme .profile-edit-actions {
+  border-top-color: #eee;
+}
+
+body.light-theme .profile-input {
+  background: #fff;
+  color: #111;
+  border-color: rgba(100, 108, 255, 0.3);
+}
+
+body.light-theme .profile-input:focus {
+  border-color: #646cff;
+}
+
+body.light-theme .profile-save-btn {
+  background: #111;
+  color: #fff;
+}
+
+body.light-theme .profile-cancel-btn {
+  border-color: #ddd;
+  color: #666;
+}
+
+body.light-theme .profile-cancel-btn:hover:not(:disabled) {
+  background: #f4f4f4;
+  color: #111;
+}
+
+body.light-theme .profile-action-btn {
+  background: #f4f4f4;
+  color: #111;
+  border-color: #ddd;
+}
+
+body.light-theme .profile-action-btn:hover {
+  background: #e8e8e8;
+}
+
+body.light-theme .danger-zone {
+  background: #fffafa;
+  border-color: #ffcccc;
+}
+
+body.light-theme .danger-btn {
+  background: #fff0f0;
+  border-color: #ffcccc;
+}
+
+body.light-theme .danger-btn:hover {
+  background: #ffe0e0;
+}

@@ -51,19 +51,18 @@
 }
 
 #root {
-  width: 1126px;
-  max-width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  border-inline: 1px solid var(--border);
+  width: 100%;
   min-height: 100svh;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  background: #000000;
 }
 
 body {
   margin: 0;
+  background: #000000;
+  min-height: 100svh;
 }
 
 h1,
@@ -109,3 +108,203 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 }
+
+/* ── Light Theme Overrides ── */
+body.light-theme {
+  --bg: #f4f4f9;
+  --text-h: #111;
+  background: #f4f4f9;
+}
+
+body.light-theme #root {
+  background: #f4f4f9;
+}
+
+body.light-theme .app-main {
+  background: #f4f4f9;
+}
+
+body.light-theme .sidebar {
+  background: rgba(255, 255, 255, 0.95);
+  border-right-color: #ddd;
+}
+
+body.light-theme .sidebar-logo-text,
+body.light-theme .session-title,
+body.light-theme .user-name {
+  color: #111;
+}
+
+body.light-theme .new-chat-btn,
+body.light-theme .sidebar-empty,
+body.light-theme .session-date,
+body.light-theme .sidebar-footer-text,
+body.light-theme .logout-btn {
+  color: #555;
+  border-color: #ddd;
+}
+
+body.light-theme .new-chat-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: #111;
+}
+
+body.light-theme .session-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .session-item--active {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+body.light-theme .session-item--active .session-title {
+  color: #000;
+}
+
+body.light-theme .sidebar-footer {
+  border-top-color: #ddd;
+}
+
+body.light-theme .login-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+body.light-theme .login-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+body.light-theme .user-profile-btn {
+  color: #111;
+}
+
+body.light-theme .user-profile-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .user-menu-popover {
+  background: #ffffff;
+  border-color: #ddd;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .user-menu-name {
+  color: #111;
+}
+
+body.light-theme .user-menu-plan {
+  color: #666;
+}
+
+body.light-theme .user-menu-divider {
+  background: #eee;
+}
+
+body.light-theme .user-menu-item {
+  color: #333;
+}
+
+body.light-theme .user-menu-item:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .user-menu-item svg {
+  color: #666;
+}
+
+body.light-theme .chatbot-container {
+  background: #f4f4f9;
+}
+
+body.light-theme .chat-title {
+  color: #111;
+}
+
+body.light-theme .chat-subtitle {
+  color: #666;
+}
+
+body.light-theme .chat-input-form {
+  background: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+}
+
+body.light-theme .chat-input {
+  color: #111;
+}
+
+body.light-theme .chat-input::placeholder {
+  color: #999;
+}
+
+body.light-theme .send-button {
+  background: #000;
+  color: #fff;
+}
+
+body.light-theme .mic-button {
+  color: #666;
+}
+
+body.light-theme .chat-bubble.user {
+  background: #e2e8f0;
+  color: #111;
+}
+
+body.light-theme .chat-bubble.assistant {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #111;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+body.light-theme .settings-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+body.light-theme .settings-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+body.light-theme .settings-dropdown {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: #ddd;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .settings-header {
+  border-bottom-color: #eee;
+}
+
+body.light-theme .settings-header h3 {
+  color: #111;
+}
+
+body.light-theme .settings-item-title {
+  color: #222;
+}
+
+body.light-theme .settings-item-desc {
+  color: #666;
+}
+
+body.light-theme .theme-toggle {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+body.light-theme .theme-toggle:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme .slider {
+  background-color: #ccc;
+}
+
